@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="block" id="block_portfolio">
+    <div id="title_projects">
+        <h2>Projets Réalisés</h2>
+    </div>
+    <div class="col-lg-8 offset-lg-3">                            
+        <p class="text-white text-center"> Ici sont présentés les projets que j'ai pu effectuer. Constatez par vous même en vous rendant directement sur un projet. N'hésitez pas à selectionner une carte projet pour afficher son contenu sur le panneau. En bas du panneau sont détaillées les compétences utilisés</p>
+    </div>
+    <ul id="project_gallery">
+            {% for project in projects %}
+            <li class="project">
+                <img src="{{ vich_uploader_asset(project, 'imageFile') | imagine_filter('slider_thumb')}}" alt="image projet">
+                {# <div class="project_link">
+                        <a href="{{ project.link }}" class=""> voir le site </a>
+                </div>
+                <p> {{ project.description }}</p>                           
+                <div class="opacity-description">
+                </div> #}
+            </li>
+            {% endfor %}
+    </ul>
+</div>          
+
+{% endblock %}

@@ -1,0 +1,43 @@
+
+
+    {% block body %}
+    <div class="modal_contact h-home h-skills h-projects">
+        <div class="alert alert-success" id="success_msg">
+            <p class="text-center">Votre message à bien été envoyé</p>
+        </div>
+        <div class="adress text-center">
+            <address>
+                <p> Je suis joignable directement à cet adresse:</p>
+                <a href="mailto:alliaume.nicolas@gmail.com">alliaume.nicolas@gmail.com</a><br>
+            </address>
+        </div>
+        <div class="login-box" id="contact_box">
+            <h3 class="text-white">Laisser un message</h3>
+            <form>
+                <div class="user-box">
+                <input type="text" name="name" id="name" required="">
+                <label for="name">Nom</label>
+                </div>
+                <div class="user-box">
+                <input type="text" name="firstname" id="firstname" required="">
+                <label for="firstname">Prénom</label>
+                </div>
+                <div class="user-box">
+                <input type="email" name="mail" id="mail" required="">
+                <label for="mail">e-mail</label>
+                </div>
+                <div class="user-box">
+                <textarea type="textarea" name="email" id="message" required=""></textarea>
+                </div>
+                <a href="#contact_box" id="button_form">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Envoyer
+                </a>
+                <p id="errors_form"></p>
+            </form>
+        </div>
+    </div>
+   {% endblock %}

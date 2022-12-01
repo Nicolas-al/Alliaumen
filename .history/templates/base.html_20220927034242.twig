@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Open Graph data -->
+        <meta name="description" content="Portfolio developpeur Web"/>
+        <link rel="canonical" href="http://alliaumen.com/" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Portfolio Nicolas-A" />
+        <meta property="og:description" content="Portfolio présentant l'ensemble de mes compétences ainsi que les projets effectués dans le Developpement Web" />
+        <meta property="og:url" content="http://alliaumen.com/" />
+        <meta property="og:site_name" content="Portfolio Nicolas-A" />
+
+        <!-- Twitter cards -->
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="Portfolio présentant l'ensemble de mes compétences ainsi que les projets effectués dans le Developpement Web" />
+        <meta name="twitter:title" content="Portfolio Nicolas-A | Compétences et projets personnel dans le developpement web" />
+        <meta name="twitter:site" content="@PortfolioNA" />
+        <meta name="twitter:image" content="https://blog.octopulse.io/wp-content/uploads/2019/05/logo-seul-couleur@2x-e1556899421228.png" /> 
+
+        <title>{% block title %}Projet5!{% endblock %}</title>
+        {% block stylesheets %}
+        {{ encore_entry_link_tags('app') }}
+        <link type="text/css" rel="stylesheet" href="{{ asset('/css/style.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{ asset('/css/projects.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{ asset('/css/skills.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{ asset('/css/contact.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{ asset('/css/menu.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{ asset('/css/template.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{ asset('/css/loader.css') }}" />
+
+
+        {# <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css"> #}
+        <script src="https://kit.fontawesome.com/daaf48b856.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Philosopher&family=Dosis:wght@600&family=Merienda:wght@700&family=Yusei+Magic&family=Vollkorn&family=Architects+Daughter&family=Fjalla+One&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        {# <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>  #}
+        <!-- stats.js lib --> 
+        {# <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script> #}
+        {# <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script> #}
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        {# <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> #}
+        {# <script src="https://threejs.org/examples/js/libs/stats.min.js"></script> #}
+        
+        {% endblock %}
+        {% block javascripts %}
+                   {{ encore_entry_script_tags('app') }}
+                   <script src="{{asset('/build/app.js')}}"></script>
+        {% endblock %}
+    </head>
+    <body id="body">
+        {% include 'main/template.html.twig' %}
+        <div class="main d-flex">
+            {% include 'main/menu.html.twig' %}
+            {% block body %}
+       
+            
+            {% endblock %}
+            {% include 'contact/index.html.twig' %}
+            
+        </div>
+        <footer id="footer" class="position-absolute">
+            {% include 'main/footer.html.twig' %}
+        </footer>
+        
+        {# <script src="{{ asset('js/accueil/imageGrid.js') }}"></script> #}
+        <script src="{{ asset('js/accueil/profil.js') }}"></script>
+        {# <script src="{{ asset('js/accueil/slider.js') }}"></script> #}
+        <script src="{{ asset('js/accueil/contact.js') }}"></script>
+        <script src="{{ asset('js/accueil/template.js') }}"></script>
+        <script src="{{ asset('js/accueil/footer.js') }}"></script>
+        <script src="{{ asset('js/skill/skills.js') }}"></script>
+    </body>
+    
+</html>

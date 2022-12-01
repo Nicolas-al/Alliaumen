@@ -1,0 +1,90 @@
+#block_competences{
+    color: white;
+}
+#progress_bar{
+    height: 22px;
+    width: 100%;
+    margin-top: 1.2%;
+}
+#progress_bar2{
+    height: 22px;
+    width: 100%;
+    margin-top: 1.2%;
+}
+.progresss-bar{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    width : 0px;
+}
+.img-logo img{
+    width: 22px;
+}
+#competences{
+    padding-top: 6%;
+}
+#competences h2{
+    font-family: 'Vollkorn', serif;
+    color: aquamarine;
+}
+#competences h4{
+    font-family: 'Vollkorn', serif;
+}
+#back{
+    margin-top: 5%;
+}
+
+#progress_bar_orange{
+    background-color: rgb(239, 175, 33)
+}
+#progress_bar_blue{
+    background-color: rgb(56, 99, 179)
+}
+#progress_bar_pink{
+    background-color: rgb(233, 45, 123)
+}
+#progress_bar_grey{
+    background-color: rgb(107, 107, 107)
+}
+#progress_bar_black{
+    background-color: rgb(0, 1, 5)
+}
+#progress_bar_lightBlue{
+    background-color: rgb(45, 201, 248)
+}
+#progress_bar_purple{
+    background-color: rgb(117, 20, 173)
+}
+#progress_bar_yellow{
+    background-color: rgb(232, 196, 21);
+}
+
+@media screen and (max-width: 991px){
+
+    #competences{
+        margin-left: 13%;
+        margin-top: 113px;
+    }
+    #front{
+        width: 80%;
+    }
+    #back{
+        width: 80%;
+    }
+    .skills_progress{
+        justify-content: center;
+        margin-top: 0px;
+    }
+}
+@media screen and (max-width: 699px){
+    #competences{
+        margin-left: 0px;
+    }
+    #block_competences{
+        margin-top: 26%;
+    }
+
+}

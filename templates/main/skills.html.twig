@@ -1,0 +1,66 @@
+    {% extends 'base.html.twig' %}
+
+    {% block body %}
+
+     <div class="block" id="block_competences">
+        <div class="container">
+            <div class="row" id="competences">
+                <div class="col-lg-4 offset-lg-3 text-center m-auto p-4">
+                    <h2>Expériences & Compétences</h2>
+                    <p> 
+                    Tout juste sorti de formation, voici un éventail des compétences maitrisées sous forme de barre de progression.
+                    </p>
+                    <p>
+                    Connaissances dans le SHELL(bash, zsh), Ubuntu 20.04, Mamp, Apache, ..
+                    </p>
+                </div>
+                <div class="col-lg-5">
+                <div class="row skills_progress">
+                    <div class="col-lg-10" id="front">
+                        <h4>Frontend</h4>
+                        {% for skill in skills %}
+                            {% if skill.type == "Frontend" %}
+                            <div class="skill">
+                                {% if skill.logo %}
+                                <div class="progress" id="progress_bar">
+                                    <div class="progresss-bar" id="progress_bar_{{ skill.color }}" aria-valuenow="{{ skill.percent }}" aria-valuemax="100">
+                                        <div class="img-logo">
+                                            <img src="{{ vich_uploader_asset( skill, 'logoFile') | imagine_filter('small_thumb')}}" alt="">
+                                        </div>
+                                        <p class="mt-auto mb-auto ml-2">{{ skill.name }}</p>
+                                {% endif %}
+                                    <p class="m-auto">{{ skill.percent }}%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>    
+                <div class="row skills_progress">  
+                    <div class="col-lg-10" id="back">
+                        <h4>Backend</h4>
+                        {% for skill in skills %}
+                            {% if skill.type == "Backend" %}
+                            <div class="skill">
+                                {% if skill.logo %}
+                                <div class="progress" id="progress_bar2">
+                                    <div class="progresss-bar" id="progress_bar_{{ skill.color }}" aria-valuenow="{{ skill.percent }}" aria-valuemax="100">
+                                        <div class="img-logo">
+                                            <img src="{{ vich_uploader_asset( skill, 'logoFile') | imagine_filter('small_thumb')}}" alt="">
+                                        </div>
+                                        <p class="mt-auto mb-auto ml-2">{{ skill.name }}</p>
+                                        {% endif %}
+                                        <p class="m-auto">{{ skill.percent }}%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div> 
+        </div>
+        </div> 
+    </div>
+    {% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ModoController!{% endblock %}
+
+{% block body %}
+
+<button class="logout"><a href="{{path('app_logout')}}"> se déconnecter </a></button>
+<section class="modo_accueil">
+    <h1>Bienvenue sur la page de modération ✅</h1>
+
+    <p> Accéder à un projet pour réguler les commentaires : </p>
+    <ul>
+        {% for project in portfolio %}
+        <li><strong> {{ project.id }} : </strong><a href="{{path('modo_project', {'id' : project.id} )}}">{{ project.title }}</a></li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}

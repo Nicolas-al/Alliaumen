@@ -1,0 +1,236 @@
+/* ------------ Project Page -------------- */
+#block_portfolio h2{
+    font-family: 'Vollkorn', serif;
+    color: aquamarine;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+ 
+}
+#title_projects{
+    height: 60px;
+}
+.block_slides{
+    height: 40%;
+    width: 50%;
+}
+#block_portfolio h4{
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+}
+.panel_project{
+    width: 100%;
+    margin: auto;
+    display: none;
+    border: 0.5px solid white;
+    border-radius : 5px;
+}
+
+.panel_project:after{
+    box-shadow: inset 10px 5px 10px #b6fc7d;
+}
+
+
+.description_project{
+    background: white;
+    padding: 1px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.description_project h4{
+    font-weight: 700;
+}
+.description_project p{
+    font-size: 0.9em;
+}
+.project img{
+    width: 100%;
+}
+.project_link{
+    text-align: center;
+    background: #15141d;
+    height: 70px;
+
+}
+.project_link a{
+    color: #7fffd3;
+    display: inline-block;
+    width: 100%;
+    padding: 3%;
+    font-size: 1.4em;
+    font-family: 'Architects Daughter', cursive;
+}
+.project_link:hover {
+    background: #7fffd3;
+}
+.project_link:hover a{
+    color: #021b31;
+}
+.project_link a:hover{
+    text-decoration: none;
+    color: #021b31;
+}
+.skills_project{
+    border-top: 5px solid #f39c12c9;
+}
+.skills_project p{
+    padding-right: 2%;
+    padding-left: 2%;
+    padding : 10px;
+}
+.skills_project span{
+    font-weight: bold;
+}
+/* Cards projects */
+
+#block_project_card{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+#projects_cards{
+    display: flex;
+}
+.project_card{
+    color: black;
+    border: 1px solid;
+    box-shadow: 0px 0px 3px;
+    border-radius: 11px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 4;
+    
+}
+
+.panel_project p{
+    color: #7efed2;
+    position: absolute;
+    top: 39%;
+    z-index: 2;
+    text-align: center;
+    width: 33%;
+    left: 34%;
+}
+.opacity-description{
+    position: absolute;
+    height: 175px;
+    top: 32%;
+    left: 30%;
+    background: #15141d;
+    opacity: 0.7;
+    width: 40%;
+}
+.project p{
+    color: white; 
+}
+.project_content{
+    height: 100%;
+}
+.project_content div{
+}
+.para_cards{
+    font-size: 0.7em;
+    position: absolute;
+}
+.project_content p{
+    padding: 3% 9% 0% 9%;
+    margin-bottom: 0;
+    text-align: justify;
+}
+.project_content p:last-child{
+    margin-bottom: 3%;
+}
+.project_content h4{
+    padding: 3%;
+}
+.project_content img{
+    max-width: 100%;
+    max-height: 100%;
+    /* filter: drop-shadow(-25px -25px 40px white); */
+    background-size: cover;
+
+}
+h1{
+    text-align: center;
+    margin: 4%;
+}
+h6{
+    position: absolute;
+}
+.project_page p{
+    font-size: 1.1em;
+    margin: 4% 0%;
+    text-align: center;
+}
+.content{
+    width: 100%;
+}
+
+
+
+.opacity_cards{
+    z-index: 2;
+    opacity: 0.4;
+    width: 31.2%;
+    height: 100%;
+    position: absolute;
+    margin-left: 0%;
+    background: #16151e;
+}
+
+@media screen and (max-width: 991px){
+    #block_portfolio h2{
+        width: 69%;
+        text-align: center;
+    }
+
+    #projects_cards{
+        margin-left: 0px;
+    }
+    .panel_project p{
+        top: 36%;
+        width: 62%;
+        left: 21%;
+    }
+    .opacity-description{
+        height: 121px;
+        top: 29%;
+        left: 16%;
+        width: 70%;
+    }
+   
+}
+@media screen and (max-width: 699px){
+    #block_portfolio h2{
+        width: 69%;
+        text-align: center;
+    }
+    #row_project_card{
+        margin-top: 10%;
+    }
+    .panel_project p {
+        top: 21%;
+    }
+    .opacity-description{
+        top: 17%;
+    }
+    .project_card {
+        max-width: 35%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 499px){
+
+    .panel_project p{
+        display: none;
+    }
+    .opacity-description{
+        display: none;
+    }
+    .block_project_card{
+        margin-top: 33px;
+    }
+}

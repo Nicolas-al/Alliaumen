@@ -1,0 +1,107 @@
+#nav_bar{
+    width: 10%;
+    backdrop-filter: blur(2px);
+    top: 0;
+    height: 500px;
+    position: fixed;
+}
+#nav{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+.menu p{
+    display: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+#nav i{
+    font-size: 1.5em;
+}
+#nav a:first-child:after{
+    content: 'ACCUEIL';
+}
+#nav a:first-child+a:after{
+    content: 'COMPETENCES';
+}
+#nav a:first-child+a+a:after{
+    content: 'PROJETS';
+}
+#nav a:last-child:after{
+    content: 'CONTACT';
+}
+#nav a:hover i{
+    opacity: 0;
+}
+#nav a:hover:after{
+    opacity: 1;
+}
+#nav a:after{
+    content: '';
+    font-size: 9px;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+#nav a{
+    margin-bottom: 15px;
+    display: block;
+    line-height: 51px;
+    position: relative;
+    text-decoration: none;
+    color: aquamarine;
+}
+#nav a i{
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+@media screen and (max-width: 991px){
+    #nav{
+        flex-direction: inherit;
+        height: 100%;
+
+    }
+    #nav a{
+        margin: auto;
+    }
+    #nav_bar{
+        width: 100%;
+        height: 17%;
+    }
+
+}
+@media screen and (max-width: 699px){
+    #nav{
+        flex-direction: inherit;
+        width: 100%;
+        height: 22%;
+        
+    }
+    
+    #nav a{
+        width: fit-content;
+        margin: auto;
+        padding-top: 8%;
+    }
+}
+@media screen and (max-width: 499px){
+    #nav{
+        height: 17%;
+    }
+    #nav a{
+        padding-top: 11%;
+    }
+    #nav i {
+        font-size: 1.2em;
+    }
+}

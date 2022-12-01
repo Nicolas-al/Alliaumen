@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+        <div class="block" id="block_home">
+            <div class="container d-flex" id="presentation">
+                <div class="row" id="block_presentation">
+                    <div class="row d-flex" id="first_row">
+                        <div class="has-animation animation-rtl" id="second_presentation">
+                            <div class="logo-wrap">
+                                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 855 150" style="enable-background:new 0 0 855 150;" xml:space="preserve">
+                                    <text transform="matrix(1 0 0 1 0 125.5508)" class="st0 st1 st2">ILLUMATE</text>
+                                </svg>
+                            </div>
+                            <div id="text_profil">
+                                <p> Nicolas Alliaume </p>
+                                <p><strong> Développeur web full stack </strong></p>
+                            </div>
+                        </div>
+                        <div class="ball"></div>
+                    </div>
+                    
+                    <div class="row" id="second_row">
+                        <button class="contact-button" id="form_button">Contact</button>
+                    </div>
+                </div>
+            </div>
+            <div class="test">
+                <img src="{{ asset('images/icons/icon-twitter.png')}}" alt="">
+            </div>
+        </div>
+        
+{% endblock %}
+

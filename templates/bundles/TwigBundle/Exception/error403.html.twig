@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Accès Refusé</h1>
+    <div class="container text-center">
+        <p>
+            Veuillez vous deconnecter avant de pouvoir vous identifier à nouveau. <a href="{{ path('app_logout') }}">se deconnecter</a>
+        </p>
+    </div>
+    {# <p>Le code est : {{status_code}}</p>
+    <p>Le texte est : {{status_text}}</p> #}
+{% endblock %}
